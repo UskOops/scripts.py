@@ -5,6 +5,7 @@
 #print(f'The hypotenuse is {hyp:.2f}')
 
 #usando import metodo math
+#from math import hypot = se eu ussase esse metodo, poderia não precisaria usar o math.hypot, bastaria usar o hypot
 import math
 catop = float(input("Size the catet oposite: "))
 catadj = float(input("Size the catet adjacent: "))
