@@ -66,7 +66,7 @@
   frase[9] ------> Pega os caracteres das posições indicadas ------------------- letra E
   frase[9:13] -> Pega os caracteres das posições indicadas ------------------- ENDE
   frase[9:18:2]--> Pega os caracteres das posições indicadas pulando 2 - EDNOA
-  len() -------------> Mostra quantas letras tem a frase -------------------------------- len(frase) = 38 letras
+  len() -------------> Mostra quantos caracteres tem a frase -------------------------------- len(frase) = 38 letras
   count() ---------> Conta quantas vezes aparece a letra escolhida ----------- frase.count('s')
   find() ------------> Procura os caracteres escolhido ---------------------------------- frase.find('aprendendo')
   replace() ------> Troca uma palavra por outra na frase --------------------------- frase.replace('python','JavaScript')
