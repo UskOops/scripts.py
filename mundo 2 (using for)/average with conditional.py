@@ -11,3 +11,4 @@ elif average < 7 and average >= 5:
     print("The student is approved with a warning")
 else:
     print("The student is disapproved")
+print("End of program")
