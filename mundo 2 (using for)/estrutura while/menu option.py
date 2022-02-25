@@ -28,5 +28,5 @@ while op != 5:
     else:
         print('Invalid option')
         sleep(2)
-print('End of the program')
+print('\33[1;31;40m End of the program \n\33[m')
 
