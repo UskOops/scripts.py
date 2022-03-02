@@ -13,3 +13,4 @@ while cont <= n:
     t1 = t2
     t2 = t3 # cont continue do it
     cont += 1
+print('...')
