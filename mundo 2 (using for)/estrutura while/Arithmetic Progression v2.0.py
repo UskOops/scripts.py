@@ -8,3 +8,5 @@ while cont <= 10:
     print('{} → '.format(term), end=' ')
     term += reason
     cont += 1
+print('The END')
+print('-='*15)
