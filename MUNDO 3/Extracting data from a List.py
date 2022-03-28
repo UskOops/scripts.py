@@ -1,7 +1,7 @@
 values = []
 while True:
     values.append(int(input('Type a value: ')))
-    answer = (input('Do you want to continue? [Y/N] ')).strip().upper()[0]
+    answer = (input('Do you want to continue? [Y/N] ')).strip().upper()[0] # strip() remove os espaços antes e depois da string
     if answer in 'Nn':
         break
 print(f'You typed {len(values)} values.')
