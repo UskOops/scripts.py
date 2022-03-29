@@ -12,6 +12,9 @@ for i in num:
     else:
         odds.append(i)# Adiciona o número na lista de ímpares
 print(f'The numbers are: {num}')
+print('=' * 15)
 print(f'The pairs are: {pairs}')
+print('=' * 15)
 print(f'The odds are: {odds}')
+print('=' * 15)
 print('End of program.')
