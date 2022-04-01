@@ -1,15 +1,32 @@
 name = []
 weight = []
-for p in range(0, 6):
-    name.append(input('Type the NAME: '))
-    weight.append(int(input('Type the WEIGHT: ')))
-for p in range(0, 6):
-    if weight[p] >= 80:
-        print(f'{name[p]} , is overweight')
-        name += 1
-    else:
-        print(f'{name[p]} , is not overweight')
-        weight += 1
-print('='*15)
-print(f'Total of overweight people: {weight.count(80)}')
-print(f'Total of not overweight people: {weight.count(79)}')
+more = less = 0
+while True:
+    name.append(input("Enter name: "))
+    name.append(float(input("Enter weight: ")))
+    if len (weight) == 0:
+        more = less = name[1]
+    elif name[1] > more:
+        more = name[1]
+    elif name[1] < less:
+        less = name[1]
+
+    weight.append(name[:])
+    name.clear()
+    answer = input("Do you want to continue? (y/n) ")
+    if answer in "nN":
+        break
+print('-' * 15)
+print(f'In total you cadastred {len(weight)} people')
+print(f'The heavier is {more}')
+for p in weight:
+    if p[1] == more:
+        print(f'{p[0]},', end=' ')
+print()
+print(f'The lighter is {less}')
+for p in weight:
+    if p[1] == less:
+        print(f'{p[0]},', end=' ')
+        
+
+    
