@@ -6,4 +6,4 @@ for c in range(0, 3):
     brasil.append(state.copy()) #copy() copia o dicionario
 for e in brasil:
     for k, v in e.items(): # retorna todos os valores do dicionario
-        print(f'The field {k} have a value {v}') #k = dicionario key, v = dicionario value
+        print(f'{k} - {v}') #k = dicionario key, v = dicionario value
