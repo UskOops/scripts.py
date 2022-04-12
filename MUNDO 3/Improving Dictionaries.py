@@ -19,9 +19,14 @@ while True:
         print('Invalid answer!')
     if answer == 'N':
         break
+print('-=' * 30)# a partir daqui está o resultado
+print('cod', end=' ')
+for i in player.keys():
+    print(f'{i:<15}', end=' ')
+print()
 print('-=' * 30)
 for i, v in enumerate(team): #para interar com a lista usa-se o enumerate
-    print(f'{i:>4}', end=' ')
+    print(f'{i:>3}', end=' ')
     for d in v.values(): # o D = dado
         print(f'{str(d):<15}', end=' ')
     print()
