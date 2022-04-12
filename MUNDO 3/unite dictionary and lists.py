@@ -22,18 +22,32 @@ while True:
     if answer == 'N':
         break
 print('-=' * 20)
-print(f'(A)Total of people: {len(guys)}')
+print(f'(A) Total of people: {len(guys)}')
 for guy in guys:
     sum += guy['age'] # soma das idades
     average = sum / len(guys) # media das idades
-print(f'(B)The average of age is {average:.2f}') # media arredondada usando 2 casas decimais
-print(f'(C)The registered women are, ', end='')
+print(f'(B) The average of age is {average:.2f}') # media arredondada usando 2 casas decimais
+print(f'(C) The registered women are, ', end='')
 for guy in guys: 
     if guy['sex'] == 'F':
         print(f'{guy["name"]} ', end='') 
-print(f'(D) List of people with age above average: ', end='')
+print('-='*20)
+print(f'\n(D) List of people with age above average: ', end=' ')
 for guy in guys:
     if guy ['age'] >= average:
-        
+        for key, value in guy.items():
+            print(f'{key} = {value}', end=' ')
+        print()
+print('-=' * 20)
+print('(E) List of people with age below average: ', end=' ')
+for guy in guys:
+    if guy ['age'] < average:
+        for key, value in guy.items():
+            print(f'{key} = {value}', end=' ')
+        print()
+print('-=' * 20)
+(guys.sort(key=lambda x: x['age'])) # ordena a lista de pessoas por idade
+
+
 
 
