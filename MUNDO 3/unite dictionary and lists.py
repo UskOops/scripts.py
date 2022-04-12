@@ -11,13 +11,13 @@ while True:
             break
         print('ERROR! Please, type you correct sex (M or F): ')
     people ['age'] = int(input('AGE: '))
-    print('-=' * 20)
     guys.append(people.copy())
+    print('-=' * 20)
     while True:
         answer = input('Do you want continue? [Y/N] ').upper()[0]
-        if answer in  'YN':
+        if answer in 'YN':
             break
         print('ERROR! Answer only Y or N: ')
-    if answer == 'S':
+    if answer == 'N':
         break
 print(guys)
