@@ -27,3 +27,9 @@ for guy in guys:
     sum += guy['age'] # soma das idades
     average = sum / len(guys) # media das idades
 print(f'The average of age is {average:.2f}')
+print(f'The registered women are, ', end='')
+for guy in guys:
+    if guy['sex'] == 'F':
+        print(f'{guy["name"]} ', end='')
+
+
