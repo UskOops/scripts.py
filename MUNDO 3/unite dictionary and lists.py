@@ -21,7 +21,7 @@ while True:
         print('ERROR! Answer only Y or N: ')
     if answer == 'N':
         break
-print('-=' * 20)
+print('-=' * 20) #ate essa linha estamos apenas lendo os dados, após, temos o resultado da analise dos dados
 print(f'(A) Total of people: {len(guys)}')
 for guy in guys:
     sum += guy['age'] # soma das idades
@@ -47,6 +47,7 @@ for guy in guys:
         print()
 print('-=' * 20)
 (guys.sort(key=lambda x: x['age'])) # ordena a lista de pessoas por idade
+print('End of the program')
 
 
 
