@@ -1,3 +1,4 @@
+#esse codigo da continuação e aprimora o exercicio 'Football Player Registration.py'
 player = {}
 team = []
 matchs = []
@@ -19,7 +20,7 @@ while True:
         print('Invalid answer!')
     if answer == 'N':
         break
-print('-=' * 30)# a partir daqui está o resultado
+print('-=' * 30)# a partir daqui mostra o resultado
 print('cod', end=' ')
 for i in player.keys():
     print(f'{i:<15}', end=' ')
@@ -31,4 +32,17 @@ for i, v in enumerate(team): #para interar com a lista usa-se o enumerate
         print(f'{str(d):<15}', end=' ')
     print()
 print('-=' * 30)
+while player == {}:
+    print('The player has not played any match')
+    break
+while True:
+    search = int(input('Show data of which player? (999 to exit) '))
+    if search == 999:
+        break
+    if search >= len(team):
+        print(f'The player with cod.{search} does not exist!')
+    else:
+        print(f'-- {team[search]["name"]} --')
+        for k, v in team[search].items(): #interação com dicionário
+            print(f'{k} => {v}')
 
