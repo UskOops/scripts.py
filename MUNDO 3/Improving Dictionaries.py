@@ -45,4 +45,8 @@ while True:
         print(f'-- {team[search]["name"]} --')
         for k, v in team[search].items(): #interação com dicionário
             print(f'{k} => {v}')
+        for i, g in enumerate(team[search]['gols']):
+            print(f'In match {i+1} make => {g} gols!')
+        print('-=' * 30)
+print('------END OF PROGRAM------')
 
