@@ -1,24 +1,25 @@
 from time import sleep as sl
 
 def counter(i, f, s): #i = initial, f = final, p = step
+    if s < 0:
+        s *= -1 #transformando o passo em positivo
+    if s == 0:
+        s = 1
     print('~'*30)
     print(f'Counter the {i} at {f} the {s} in the {s}')
-    if s < 0:
-        p *= -1 #transformando o passo em positivo
-    if p == 0:
-        p = 1
+    
     if i < f:
         count = i
         while count <= f:
             print(f'{count}', end=' ', flush=True)
-            sl(0.8)
+            sl(0.3)
             count += s
         print('END!')
     elif i > f:
         count = i
         while count >= f:
             print(f'{count}', end=' ', flush=True) # comando FLUSH desliga o buffer de tela e faz o sleep carregar proceduralmente
-            sl(0.8)
+            sl(0.3)
             count -= s
         print('END!')
     print('~'*30)
