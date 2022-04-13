@@ -3,6 +3,10 @@ from time import sleep as sl
 def counter(i, f, s): #i = initial, f = final, p = step
     print('~'*30)
     print(f'Counter the {i} at {f} the {s} in the {s}')
+    if s < 0:
+        p *= -1 #transformando o passo em positivo
+    if p == 0:
+        p = 1
     if i < f:
         count = i
         while count <= f:
