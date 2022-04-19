@@ -1,34 +1,29 @@
-def notas(*ns, sit=False):
-    """
-    -> Analisa as notas e situação de vários alunos.
-    :param ns: uma ou mais notas dos alunos (aceita várias).
-    :param sit: valor opcional, indicando se deve ou não adicionar a situação.
-    :return: dicionário com várias informações sobre a situação da turma.
-    """
+from random import randint as rand
 
-    # Removendo True e False da lista caso tenha usado a função de maneira errada
-    ns = tuple(valor for valor in ns if int(valor) != valor)
+inf = {}
 
-    print('\n', '-' * 30, sep='')
 
-    dicio = dict()
+def data(*grade, situ=True):
 
-    dicio['total'] = len(ns)
-    dicio['maior'] = max(ns)
-    dicio['menor'] = min(ns)
-    dicio['média'] = round(sum(ns) / len(ns), 3)
-
-    if sit:
-        if dicio['média'] >= 7:
-            dicio['situação'] = 'BOA'
-        elif dicio['média'] >= 5:
-            dicio['situação'] = 'RAZOÁVEL'
+    # main
+    a = 0
+    inf["Total"] = len(grade)
+    inf["biggest"] = max(grade)
+    inf["smallest"] = min(grade)
+    inf["average"] = sum(grade)/len(grade)
+    if situ:
+        if inf["average"] >= 7:
+            print(f'The average is {inf["average"]} and the student is approved')
+            inf["Approved"] = True
+        elif inf["average"] < 7:
+            print(
+                f'The average is {inf["average"]} and the student is disapproved')
+            inf["Approved"] = False
         else:
-            dicio['situação'] = 'RUIM'
-
-    return dicio
-
-
-# Programa Principal
-info = notas(5.5, 2.5, 1.5, sit=True)  # notas(3.5, 2, 6.5, 2, 7, 4)
-print(info)
+            print(
+                f'The average is {inf["average"]} and the student is not approved')
+        inf["Approved"] = False
+    else:
+        print(f'The average is {inf["average"]}')
+data(rand(1, 15),rand(1, 15),rand(1, 15), situ=True)
+print(inf)
