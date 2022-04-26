@@ -1,3 +1,3 @@
 from interface import *
 
-menu (['OPT1', 'OPT2', 'OPT3'])
+answer = menu (['Create file', 'Register people', 'List people', 'Exit'])
