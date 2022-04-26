@@ -1,4 +1,4 @@
-Gutavo
-marco
-ana
-gabi
+Gustavo;20
+Marco;23
+Ana;25
+Gabi;25
