@@ -25,7 +25,12 @@ def readarchive(name):
         print('Error reading archive')
     else:
         header('People in the archive')
-        print(a.read())
+        for line in a:
+            data = line.split(';') #split = separa a string em uma lista usando ; como separador
+            data[1] = data[1].replace('\n', '') #replace = substitui o \n por nada
+            print(f'{data[0]} ------ age: {data[1]}') #dado 1 = idade
+
+
 
 def cad(arch, name='unknown', age=0):# se não for passado nome e idade, nome sera desconhecido e idade 0
     try:
