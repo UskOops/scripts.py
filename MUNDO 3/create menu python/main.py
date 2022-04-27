@@ -10,11 +10,18 @@ if not archexist(arch):
 while True:
     answer = menu (['List people', 'Register people', 'Exit'])
     if answer == 1:
-        print('Registering people')
+        print('REGISTERED PEOPLE...')
         #list content of archive
         readarchive(arch)
     elif answer == 2:
-        print('Listing people')
+        print('New cadastre')
+        name = input('Name: ')
+        sl(0.3)
+        age = readint('Age: ')
+        sl(0.3)
+        print(f'Registering {name} with age {age}')
+        sl(0.3)
+        cad(arch, name, age) #cadastro recebe o nome e idade
     elif answer == 3:
         print('Exiting...')
         break
