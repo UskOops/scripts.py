@@ -26,3 +26,12 @@ def readarchive(name):
     else:
         header('People in the archive')
         print(a.read())
+
+def cad(arch, name='unknown', age=0):# se não for passado nome e idade, nome sera desconhecido e idade 0
+    try:
+        a = open(arch, 'at') # at = append text
+    except:
+        print('Error writing archive')
+    else:
+        a.write(f'{name};{age}\n')
+        print(f'{name} registered with age {age}')
