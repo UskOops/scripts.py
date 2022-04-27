@@ -28,7 +28,7 @@ def readarchive(name):
         for line in a:
             data = line.split(';') #split = separa a string em uma lista usando ; como separador
             data[1] = data[1].replace('\n', '') #replace = substitui o \n por nada
-            print(f'{data[0]} ------ age: {data[1]}') #dado 1 = idade
+            print(f'{data[0]:<8} ---- age: {data[1]:>3}') #dado 1 = idade
 
 
 
