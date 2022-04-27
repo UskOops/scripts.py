@@ -12,14 +12,14 @@ def readint(msg):
             return n
 
 
-def row(size=40):
+def line(size=40):
     return '-' * size
 
 
 def header(txt):
-    print(row())
+    print(line())
     print(txt.center(40))
-    print(row())
+    print(line())
 
 
 def menu(list):
@@ -28,6 +28,6 @@ def menu(list):
     for item in list:
         print(f'{c} - {item}')
         c += 1
-    print(row())
+    print(line())
     option = readint('Choose an option: ')
     return option
